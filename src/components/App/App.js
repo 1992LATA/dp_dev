@@ -88,9 +88,9 @@ class App extends Component {
             {/* <img src={logo} className='App-logo' alt='logo' /> */}
             <h1 className='App-intro'>Business Process</h1>
             <p>
-              configure a business procrocess
+              configure your business process here
               <br />
-              add new, update or delete a process here          
+              add, update or delete process.         
                 </p>
             {/* <a className='shirts' href='https://www.teepublic.com/en-au/user/codeweario/albums/4812-tech-stacks' target='_blank' rel='noopener noreferrer'>
               <img src={shirts} alt='Buy MERN Shirts' />
@@ -100,7 +100,7 @@ class App extends Component {
         </div>
         <Container>
           <ModalUser
-            headerTitle='Add Process'
+            headerTitle='Add New Process'
             buttonTriggerTitle='Add New'
             buttonSubmitTitle='Add'
             buttonColor='green'
