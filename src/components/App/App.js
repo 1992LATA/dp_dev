@@ -5,9 +5,7 @@ import io from 'socket.io-client';
 
 import TableUser from '../TableUser/TableUser';
 import ModalUser from '../ModalUser/ModalUser';
-
-//import logo from '../../mern-logo.png';
-//import shirts from '../../shirts.png';
+//import DrawerNavigator from '../../navigation/DrawerNavigator';
 import './App.css';
 
 class App extends Component {
@@ -90,13 +88,13 @@ class App extends Component {
             <p>
               configure your business process here
               <br />
-              add, update or delete process.         
-                </p>
-            {/* <a className='shirts' href='https://www.teepublic.com/en-au/user/codeweario/albums/4812-tech-stacks' target='_blank' rel='noopener noreferrer'>
-              <img src={shirts} alt='Buy MERN Shirts' />
-              <br />Buy MERN Shirts
-            </a> */}
+              add, update or delete process.
+            </p>
+
           </div>
+          {/* <View style={styles.container}>
+        <DrawerNavigator />
+      </View> */}
         </div>
         <Container>
           <ModalUser
