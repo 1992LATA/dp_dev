@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Container } from 'semantic-ui-react';
 import axios from 'axios';
 import io from 'socket.io-client';
-
+import Sidebar from '../App/sidebar';
 import TableUser from '../TableUser/TableUser';
 import ModalUser from '../ModalUser/ModalUser';
-//import DrawerNavigator from '../../navigation/DrawerNavigator';
+import'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
@@ -83,19 +83,17 @@ class App extends Component {
       <div>
         <div className='App'>
           <div className='App-header'>
-            {/* <img src={logo} className='App-logo' alt='logo' /> */}
             <h1 className='App-intro'>Business Process</h1>
             <p>
-              configure your business process here
+              configure documents 
               <br />
-              add, update or delete process.
+              add, update or remove.
             </p>
 
           </div>
-          {/* <View style={styles.container}>
-        <DrawerNavigator />
-      </View> */}
+        
         </div>
+       
         <Container>
           <ModalUser
             headerTitle='Add New Process'
@@ -106,7 +104,7 @@ class App extends Component {
             server={this.server}
             socket={this.socket}
           />
-          <em id='online'>{onlineText}</em>
+          {/* <em id='online'>{onlineText}</em> */}
           <TableUser
             onUserUpdated={this.handleUserUpdated}
             onUserDeleted={this.handleUserDeleted}
@@ -116,6 +114,11 @@ class App extends Component {
           />
         </Container>
         <br />
+        <div className='d-flex'>
+          <div className='col-auto'>
+            <Sidebar />
+          </div>
+        </div>
       </div>
     );
   }
