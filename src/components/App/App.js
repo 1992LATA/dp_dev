@@ -70,14 +70,14 @@ class App extends Component {
   }
 
   render() {
-    let peopleOnline = this.state.online - 1;
-    let onlineText = "";
+    // let peopleOnline = this.state.online - 1;
+    // let onlineText = "";
 
-    if (peopleOnline < 1) {
-      onlineText = 'No one else is online';
-    } else {
-      onlineText = peopleOnline > 1 ? `${this.state.online - 1} people are online` : `${this.state.online - 1} person is online`;
-    }
+    // if (peopleOnline < 1) {
+    //   onlineText = 'No one else is online';
+    // } else {
+    //   onlineText = peopleOnline > 1 ? `${this.state.online - 1} people are online` : `${this.state.online - 1} person is online`;
+    // }
 
     return (
       <div>
