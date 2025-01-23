@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react';
+//import { Container } from 'semantic-ui-react';
 import axios from 'axios';
 import io from 'socket.io-client';
 import Sidebar from '../App/sidebar';
@@ -84,12 +84,7 @@ class App extends Component {
       <div>
         <div className='App'>
           <div className='App-header'>
-            <h1 className='App-intro'>Business Process</h1>
-            <p>
-              configure documents 
-              <br />
-              add, update or remove.
-            </p>
+            <h1 className='App-intro'>Document Management Service</h1>
           </div>
         </div>
        
@@ -100,11 +95,11 @@ class App extends Component {
           </div>
           <div>
             <Routes>
-              <Route path='/home' element={<Home />} />
+              {/* <Route path='/home' element={<Home />} /> */}
               <Route path='/process' element={<TableUser users={this.state.users} onUserUpdated={this.handleUserUpdated} onUserDeleted={this.handleUserDeleted} server={this.server} socket={this.socket} />} />
               <Route path='/users' element={<TableUser users={this.state.users} onUserUpdated={this.handleUserUpdated} onUserDeleted={this.handleUserDeleted} server={this.server} socket={this.socket} />} />
               <Route path='/new' element={<ModalUser headerTitle='Add New Process' buttonTriggerTitle='Add New Process' buttonSubmitTitle='Add' buttonColor='green' onUserAdded={this.handleUserAdded} server={this.server} socket={this.socket} />} />
-              <Route path='/edit/:id' element={<ModalUser headerTitle='Edit Process' buttonTriggerTitle='Edit' buttonSubmitTitle='Save' buttonColor='blue' onUserUpdated={this.handleUserUpdated} server={this.server} socket={this.socket} />} />
+              {/* <Route path='/edit/:id' element={<ModalUser headerTitle='Edit Process' buttonTriggerTitle='Edit' buttonSubmitTitle='Save' buttonColor='blue' onUserUpdated={this.handleUserUpdated} server={this.server} socket={this.socket} />} /> */}
             </Routes>
           </div>
     
@@ -119,16 +114,16 @@ class App extends Component {
 
 export default App;
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Home</h1>
-         <Container>
+// class Home extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <h1>Home</h1>
+//          <Container>
           
-         </Container>
-      </div>
+//          </Container>
+//       </div>
      
-    );
-  }
-}
+//     );
+//   }
+// }
