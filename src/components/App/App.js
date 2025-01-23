@@ -6,6 +6,7 @@ import Sidebar from '../App/sidebar';
 import TableUser from '../TableUser/TableUser';
 import ModalUser from '../ModalUser/ModalUser';
 import'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -89,39 +90,45 @@ class App extends Component {
               <br />
               add, update or remove.
             </p>
-
           </div>
-        
         </div>
        
-        <Container>
-          <ModalUser
-            headerTitle='Add New Process'
-            buttonTriggerTitle='Add New'
-            buttonSubmitTitle='Add'
-            buttonColor='green'
-            onUserAdded={this.handleUserAdded}
-            server={this.server}
-            socket={this.socket}
-          />
-          {/* <em id='online'>{onlineText}</em> */}
-          <TableUser
-            onUserUpdated={this.handleUserUpdated}
-            onUserDeleted={this.handleUserDeleted}
-            users={this.state.users}
-            server={this.server}
-            socket={this.socket}
-          />
-        </Container>
-        <br />
+        <BrowserRouter>
         <div className='d-flex'>
           <div className='col-auto'>
             <Sidebar />
           </div>
+          <div>
+            <Routes>
+              <Route path='/home' element={<Home />} />
+              <Route path='/process' element={<TableUser users={this.state.users} onUserUpdated={this.handleUserUpdated} onUserDeleted={this.handleUserDeleted} server={this.server} socket={this.socket} />} />
+              <Route path='/users' element={<TableUser users={this.state.users} onUserUpdated={this.handleUserUpdated} onUserDeleted={this.handleUserDeleted} server={this.server} socket={this.socket} />} />
+              <Route path='/new' element={<ModalUser headerTitle='Add New Process' buttonTriggerTitle='Add New Process' buttonSubmitTitle='Add' buttonColor='green' onUserAdded={this.handleUserAdded} server={this.server} socket={this.socket} />} />
+              <Route path='/edit/:id' element={<ModalUser headerTitle='Edit Process' buttonTriggerTitle='Edit' buttonSubmitTitle='Save' buttonColor='blue' onUserUpdated={this.handleUserUpdated} server={this.server} socket={this.socket} />} />
+            </Routes>
+          </div>
+    
+        
         </div>
+        </BrowserRouter>
       </div>
+      
     );
   }
 }
 
 export default App;
+
+class Home extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Home</h1>
+         <Container>
+          
+         </Container>
+      </div>
+     
+    );
+  }
+}
