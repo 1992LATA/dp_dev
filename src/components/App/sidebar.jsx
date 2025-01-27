@@ -1,39 +1,37 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BiAddToQueue } from "react-icons/bi";
+import { MdOutlineCollectionsBookmark } from "react-icons/md";
+import { BsFillPeopleFill } from "react-icons/bs";
 
 
 class Sidebar extends React.Component {
     render() {
         return (
-            <div className=" d-flex flex-column justify-content-between bg-dark text-white p-4 vh-100 ">
-                <div>
+            <div className=" fixed bg-gray-800 px-4 h-full py-2 w-64 ">
+                <div className='my-2 mb-4'>
 
-                    <a href=" d-flex align-items-center">
-                        <i className="bi bi-bootstrap fs-5 me-3"></i>
-                        <span fs-4>Document Management </span>
-                    </a>
-                    <hr className="text-secondary mt-2" />
-                    <ul className="nav nav-pills flex-column p-0 m-0">
-                        <li className="nav-item p-1">
-                            <a href="new" className="nav-link text-white" >
-                                <i className="bi bi-document me-3 fs-5"></i>
-
-                                <span className="fs-5">Process</span>
+                   <div>
+                    <h1 className="text-2x text-white font-bold" >Admin</h1>
+                   </div>
+                    <hr/>
+                    <ul className="mt-3">
+                        <li className="mb-2 rounded">
+                            <a href="new" className='px-3' >
+                                <BiAddToQueue className = ' inline-block w-6 h-6 mr-2 -mt-2' ></BiAddToQueue>
+                                Add Document
                             </a>
                         </li>
 
-                        <li className="nav-item p-1">
-                            <a href="process" className="nav-link text-white" >
-                                <i className="bi bi-group me-3 fs-5"></i>
-
-                                <span className="fs-5">Collections</span>
+                        <li className='mb-2 rounded'>
+                            <a href="process" className='px-3' >
+                                <MdOutlineCollectionsBookmark className = 'inline-block w-6 h-6 mr-2 -mt-2'></MdOutlineCollectionsBookmark>
+                                Collections
                             </a>
                         </li>
-                        <li className="nav-item p-1">
-                            <a href="users" className="nav-link text-white" >
-                                <i className="bi bi-document me-3 fs-5"></i>
-
-                                <span className="fs-5">Roles</span>
+                        <li className='mb-2 rounded'>
+                            <a href="users" className='px-3' >
+                                <BsFillPeopleFill className = 'inline-block w-6 h-6 mr-2 -mt-2 ' ></BsFillPeopleFill>
+                                Roles
                             </a>
                         </li>
 
@@ -54,12 +52,7 @@ class Sidebar extends React.Component {
                     </li> */}
                     </ul>
                 </div>
-                <div>
-                    <hr className="text-secondary mt-2" />
-                    <i className="bi bi-speedometer me-2 fs-5"></i>
-                    <span>Settings</span>
-                </div>
-
+              
 
             </div>
         );

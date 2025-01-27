@@ -8,6 +8,7 @@ import ModalUser from '../ModalUser/ModalUser';
 import'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Navbar } from './Navbar';
 
 class App extends Component {
   constructor() {
@@ -81,19 +82,22 @@ class App extends Component {
     // }
 
     return (
-      <div>
-        <div className='App'>
-          <div className='App-header'>
-            <h1 className='text-xl font-bold text-blue-500'>Document Management Service</h1>
-          </div>
-        </div>
+      
+        
        
         <BrowserRouter>
-        <div className = 'd-flex '>
-          <div className ='col-auto'>
-            <Sidebar />
+        <div className = 'flex h-screen'>
+          <div className = ' w-64 bg-gray-800 text-white'>
+            <Sidebar/>
           </div>
-          <div>
+          <div classname = 'flex-1 flex flex-col '>
+            <div >
+            <Navbar/>
+            </div>
+          
+          <div className='flex flex-1 justify-center items-start p-4 bg-gray-100 overflow-auto'>
+            <div className='w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg'>
+              <div className='container mx-auto'>
             <Routes>
               {/* <Route path='/home' element={<Home />} /> */}
               <Route path='/process' element={<TableUser users={this.state.users} onUserUpdated={this.handleUserUpdated} onUserDeleted={this.handleUserDeleted} server={this.server} socket={this.socket} />} />
@@ -102,11 +106,12 @@ class App extends Component {
               {/* <Route path='/edit/:id' element={<ModalUser headerTitle='Edit Process' buttonTriggerTitle='Edit' buttonSubmitTitle='Save' buttonColor='blue' onUserUpdated={this.handleUserUpdated} server={this.server} socket={this.socket} />} /> */}
             </Routes>
           </div>
-    
-        
+          </div>
+          </div>
+          </div>
         </div>
         </BrowserRouter>
-      </div>
+      
       
     );
   }
