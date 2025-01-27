@@ -84,7 +84,7 @@ class App extends Component {
       <div>
         <div className='App'>
           <div className='App-header'>
-            <h1 className='App-intro'>Document Management Service</h1>
+            <h1 className='text-xl font-bold text-blue-500'>Document Management Service</h1>
           </div>
         </div>
        
