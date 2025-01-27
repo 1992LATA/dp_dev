@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cross-env REACT_APP_API_URL=http://127.0.0.1:3000 PORT=4200 react-scripts start",
-    "build": "BUILD_PATH='../public' react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build"
+  
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
@@ -15,6 +14,7 @@
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@vitejs/plugin-react": "^4.3.4",
     "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
     "browserlist": "^1.0.1",
@@ -24,10 +24,10 @@
     "react-native": "^0.77.0",
     "react-navigation": "^5.0.0",
     "react-router-dom": "^7.1.3",
-    "react-scripts": "^5.0.1",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "socket.io-client": "^4.7.2",
+    "vite": "^6.0.11",
     "web-vitals": "^3.4.0"
   },
   "eslintConfig": {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import { Container } from 'semantic-ui-react';
 import axios from 'axios';
 import io from 'socket.io-client';
-import Sidebar from '../App/sidebar';
+import Sidebar from './sidebar';
 import TableUser from '../TableUser/TableUser';
 import ModalUser from '../ModalUser/ModalUser';
 import'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,7 @@ class App extends Component {
   constructor() {
     super();
 
-    this.server = process.env.REACT_APP_API_URL || '';
+    this.server = import.meta.env.VITE_API_URL || '';
     this.socket = io(this.server);
 
     this.state = {
@@ -89,8 +89,8 @@ class App extends Component {
         </div>
        
         <BrowserRouter>
-        <div className='d-flex'>
-          <div className='col-auto'>
+        <div className = 'd-flex '>
+          <div className ='col-auto'>
             <Sidebar />
           </div>
           <div>
