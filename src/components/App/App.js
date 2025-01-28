@@ -3,10 +3,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import io from "socket.io-client";
 import TabSwitcher from "./TabSwitcher";
-
-import BusinessProcesse from "../BusinessProcesse/BusinessProcesse";
-import ModalUser from "../ModalUser/ModalUser";
-
 import "./App.css";
 
 class App extends Component {
@@ -73,10 +69,10 @@ class App extends Component {
   }
 
   render() {
-    let peopleOnline = this.state.online - 1;
-    let onlineText = peopleOnline < 1 
-      ? "No one else is online" 
-      : `${peopleOnline} ${peopleOnline > 1 ? "people are" : "person is"} online`;
+    // let peopleOnline = this.state.online - 1;
+    // let onlineText = peopleOnline < 1 
+    //   ? "No one else is online" 
+    //   : `${peopleOnline} ${peopleOnline > 1 ? "people are" : "person is"} online`;
 
     return (
       <div>
@@ -95,17 +91,9 @@ class App extends Component {
         
         <TabSwitcher />
         
-        <ModalUser
-          headerTitle="Add New Process"
-          buttonTriggerTitle="Add New"
-          buttonSubmitTitle="Add"
-          buttonColor="green"
-          onUserAdded={this.handleUserAdded}
-          server={this.server}
-          socket={this.socket}
-        />
         
-        <em id="online">{onlineText}</em>
+        
+        {/* <em id="online">{onlineText}</em> */}
 
 
         

@@ -5,7 +5,7 @@ import axios from 'axios';
 import ModalUser from '../ModalUser/ModalUser';
 import ModalConfirmDelete from '../ModalConfirmDelete/ModalConfirmDelete';
 
-class BusinessProcesse extends Component {
+class TableUser extends Component {
   state = {
     users: [],
   };
@@ -87,5 +87,5 @@ class BusinessProcesse extends Component {
   }
 }
 
-export default BusinessProcesse;
+export default TableUser;
 
