@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import BusinessProcesse from "../BusinessProcesse/BusinessProcesse";
+import BusinessProcess from '../BusinessProcess/BusinessProcess'
+import Documents from "../Documents/Documents";
+import UserManagement from "../UserManagement/UserManagement ";
+import SharePoint from "../SharePoint/SharePoint";
+
+
+
 
 const TabSwitcher = () => {
   // Define tabs and their corresponding components
   const tabs = [
-    { name: "BusinessProcesse", component: <BusinessProcesse /> },
+    { name: "BusinessProcess", component: <BusinessProcess /> },
     { name: "Documents", component: <Documents /> },
     { name: "User Management", component: <UserManagement /> },
     { name: "SharePoint", component: <SharePoint /> },
@@ -41,33 +47,10 @@ const TabSwitcher = () => {
 };
 
 // Placeholder components for each tab
-const BusinessProcesses = () => (
-  <div>
-    <h2>Business Processes</h2>
-    <p>Here you can manage business processes.</p>
-  </div>
-);
 
-const Documents = () => (
-  <div>
-    <h2>Documents</h2>
-    <p>Here you can manage document services.</p>
-  </div>
-);
 
-const UserManagement = () => (
-  <div>
-    <h2>User Management</h2>
-    <p>Here you can manage users and permissions.</p>
-  </div>
-);
 
-const SharePoint = () => (
-  <div>
-    <h2>SharePoint</h2>
-    <p>Here you can manage SharePoint integrations.</p>
-  </div>
-);
+
 
 // Inline styles
 const styles = {
