@@ -1,8 +1,10 @@
 
 import React, { Component } from "react";
 import axios from "axios";
+import 'smart-webcomponents-react/source/styles/smart.default.css';
 import io from "socket.io-client";
 import TabSwitcher from "./TabSwitcher";
+import Navbar from '../App/Navbar/Navbar';
 import "./App.css";
 
 class App extends Component {
@@ -76,28 +78,14 @@ class App extends Component {
 
     return (
       <div>
-        <div className="App">
-          <div className="App-header">
-            <h1 className="App-intro">Business Process</h1>
-            <p>
-              Configure your business process here.
-              <br />
-              Add, update, or delete a process.
-            </p>
-          </div>
-        </div>
 
-        {/* Removed <Container> wrapper */}
-        
+        <Navbar />
+        <br/>
         <TabSwitcher />
-        
-        
-        
+      
         {/* <em id="online">{onlineText}</em> */}
 
 
-        
-        <br />
       </div>
     );
   }
