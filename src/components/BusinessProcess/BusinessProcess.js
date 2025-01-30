@@ -4,8 +4,17 @@ import ModalUser from '../ModalUser/ModalUser'
 
 export const BusinessProcess = () => {
   return (
-    <div> Add New Process
-        <ModalUser/>
+    <div> 
+      <div style={{display: 'flex', justifyContent: 'flex-end', marginBottom: '10px'}}>
+        <ModalUser 
+		    headerTitle='Add New Process'
+            buttonTriggerTitle='Add New'
+            buttonSubmitTitle='Add'
+            buttonColor='green'
+		/>
+    </div>
+		
+		
      <TableUser/>
 
         
