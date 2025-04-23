@@ -16,8 +16,8 @@ const TabSwitcher = () => {
       <TabList>
         <Tab>Business Process</Tab>
         <Tab>Documents</Tab>
-        <Tab>User Management</Tab>
-        <Tab>SharePoint</Tab>
+        <Tab>Collections</Tab>
+        <Tab>Document Upload</Tab>
       </TabList>
       <TabPanel>
         <BusinessProcess />
