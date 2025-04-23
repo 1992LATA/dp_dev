@@ -201,6 +201,7 @@ const DocumentTypeServiceForm = ({
 export default DocumentTypeServiceForm;
 
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Modal, Button, Form, Message, Dropdown } from 'semantic-ui-react';
 import axios from 'axios';
@@ -404,6 +405,8 @@ const DocumentTypeServiceForm = ({
 export default DocumentTypeServiceForm;
 
 
+=======
+>>>>>>> 5edb5f25083b865db6679e9b1ae3dd3c7b44c177
 
 
 // import React, { Component } from 'react';

@@ -28,17 +28,24 @@
 =======
     "react-scripts": "^5.0.1",
     "react-tabs": "^6.1.0",
+<<<<<<< HEAD
 >>>>>>> 0f52cfb (update tabs and added navbar header)
+=======
+>>>>>>> 5edb5f25083b865db6679e9b1ae3dd3c7b44c177
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "smart-webcomponents": "^21.0.0",
     "smart-webcomponents-react": "^21.0.0",
     "socket.io-client": "^4.7.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "vite": "^6.0.11",
 =======
     "styled-components": "^6.1.17",
 >>>>>>> 5edb5f2 (push change)
+=======
+    "styled-components": "^6.1.17",
+>>>>>>> 5edb5f25083b865db6679e9b1ae3dd3c7b44c177
     "web-vitals": "^3.4.0"
   },
   "eslintConfig": {
