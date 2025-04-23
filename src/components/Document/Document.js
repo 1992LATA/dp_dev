@@ -1,14 +1,13 @@
 import React from 'react'
-import TableUser from '../TableUser/TableUser'
-import ModalUser from '../ModalUser/ModalUser'
+import DocumentTable from '../Document/DocumentTable'
+import DocumentUser from '../Document/DocumentUser'
 
-
-export const BusinessProcess = () => {
+export const Document = () => {
   return (
     <div> 
       <div style={{display: 'flex', justifyContent: 'flex-end', marginBottom: '10px'}}>
-        <ModalUser 
-		    headerTitle='Add New Business Process'
+        <DocumentUser 
+		    headerTitle='Add New Document Type'
             buttonTriggerTitle='Add New'
             buttonSubmitTitle='Add'
             buttonColor='green'
@@ -16,10 +15,10 @@ export const BusinessProcess = () => {
     </div>
 		
 		
-     <TableUser/>
+     < DocumentTable/>
 
         
     </div>
   )
 }
-export default BusinessProcess
+export default Document

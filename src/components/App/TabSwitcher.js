@@ -2,13 +2,10 @@ import React from 'react';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import BusinessProcess from '../BusinessProcess/BusinessProcess'
-import Documents from "../Documents/Documents";
-import UserManagement from "../UserManagement/UserManagement ";
-import SharePoint from "../SharePoint/SharePoint";
-
-
-
-
+//import Documents from '../Documents/Documents'
+import Docuement from '../Document/Document'
+//import DocumentUpload from '../DocumentUpload/DocumentUpload';
+import DocumentTypeService from '../DocumentTypeService/DocumentTypeService'
 const TabSwitcher = () => {
 
   return (
@@ -16,24 +13,31 @@ const TabSwitcher = () => {
       <TabList>
         <Tab>Business Process</Tab>
         <Tab>Documents</Tab>
-        <Tab>Collections</Tab>
-        <Tab>Document Upload</Tab>
+       {/* // <Tab>DocumentUpload</Tab> */}
+        { <Tab>DocumentTypeService</Tab> }
       </TabList>
+
+
+      
       <TabPanel>
         <BusinessProcess />
       </TabPanel>
 
-      <TabPanel>
-        <Documents />
-      </TabPanel>
 
       <TabPanel>
-        <UserManagement />
+        <Docuement />
       </TabPanel>
+      
+      {/* <TabPanel>
+        <DocumentUpload />
+      </TabPanel> */}
 
-      <TabPanel>
-        <SharePoint />
-      </TabPanel>
+      { <TabPanel>
+        <DocumentTypeService />
+      </TabPanel> }
+
+
+
     </Tabs>
   );
 };
