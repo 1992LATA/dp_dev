@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import axios from "axios";
 import 'smart-webcomponents-react/source/styles/smart.default.css';
@@ -11,8 +10,8 @@ class App extends Component {
   constructor() {
     super();
 
-    this.server = process.env.REACT_APP_API_URL || "";
-    this.socket = io(this.server);
+    this.server = process.env.REACT_APP_API_URL || "http://localhost:8777";
+    this.socket = this.server ? io(this.server) : null;
 
     this.state = {
       users: [],
@@ -27,11 +26,14 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchUsers();
-    this.socket.on("visitor enters", (data) => this.setState({ online: data }));
-    this.socket.on("visitor exits", (data) => this.setState({ online: data }));
-    this.socket.on("add", (data) => this.handleUserAdded(data));
-    this.socket.on("update", (data) => this.handleUserUpdated(data));
-    this.socket.on("delete", (data) => this.handleUserDeleted(data));
+    
+    if (this.socket) {
+      this.socket.on("visitor enters", (data) => this.setState({ online: data }));
+      this.socket.on("visitor exits", (data) => this.setState({ online: data }));
+      this.socket.on("add", (data) => this.handleUserAdded(data));
+      this.socket.on("update", (data) => this.handleUserUpdated(data));
+      this.socket.on("delete", (data) => this.handleUserDeleted(data));
+    }
   }
 
   fetchUsers() {
@@ -41,7 +43,7 @@ class App extends Component {
         this.setState({ users: response.data });
       })
       .catch((err) => {
-        console.log(err);
+        console.error("Failed to fetch users:", err);
       });
   }
 
@@ -71,21 +73,11 @@ class App extends Component {
   }
 
   render() {
-    // let peopleOnline = this.state.online - 1;
-    // let onlineText = peopleOnline < 1 
-    //   ? "No one else is online" 
-    //   : `${peopleOnline} ${peopleOnline > 1 ? "people are" : "person is"} online`;
-
     return (
       <div>
-
         <Navbar />
-        <br/>
+        <br />
         <TabSwitcher />
-      
-        {/* <em id="online">{onlineText}</em> */}
-
-
       </div>
     );
   }

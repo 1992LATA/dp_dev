@@ -18,6 +18,7 @@
     "bootstrap": "^5.3.3",
     "browserlist": "^1.0.1",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.6.2",
     "react-dom": "^18.2.0",
 <<<<<<< HEAD
     "react-icons": "^5.4.0",
@@ -33,7 +34,11 @@
     "smart-webcomponents": "^21.0.0",
     "smart-webcomponents-react": "^21.0.0",
     "socket.io-client": "^4.7.2",
+<<<<<<< HEAD
     "vite": "^6.0.11",
+=======
+    "styled-components": "^6.1.17",
+>>>>>>> 5edb5f2 (push change)
     "web-vitals": "^3.4.0"
   },
   "eslintConfig": {
